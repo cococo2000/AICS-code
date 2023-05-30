@@ -1,0 +1,117 @@
+node {
+  name: "Yolov3DetectionOutput"
+  op: "Yolov3DetectionOutput"
+  input: "conv_lbbox/BiasAdd"
+  input: "conv_mbbox/BiasAdd"
+  input: "conv_sbbox/BiasAdd"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "batchNum"
+    value {
+      i: 1
+    }
+  }
+  attr {
+    key: "biases"
+    value {
+      list {
+        f: 116.0
+        f: 90.0
+        f: 156.0
+        f: 198.0
+        f: 373.0
+        f: 326.0
+        f: 30.0
+        f: 61.0
+        f: 62.0
+        f: 45.0
+        f: 59.0
+        f: 119.0
+        f: 10.0
+        f: 13.0
+        f: 16.0
+        f: 30.0
+        f: 33.0
+        f: 23.0
+      }
+    }
+  }
+  attr {
+    key: "classNum"
+    value {
+      i: 80
+    }
+  }
+  attr {
+    key: "confidence_thresh"
+    value {
+      f: 0.10000000149
+    }
+  }
+  attr {
+    key: "inputHs"
+    value {
+      list {
+        i: 13
+        i: 26
+        i: 52
+      }
+    }
+  }
+  attr {
+    key: "inputNum"
+    value {
+      i: 3
+    }
+  }
+  attr {
+    key: "inputWs"
+    value {
+      list {
+        i: 13
+        i: 26
+        i: 52
+      }
+    }
+  }
+  attr {
+    key: "maskGroupNum"
+    value {
+      i: 3
+    }
+  }
+  attr {
+    key: "maxBoxNum"
+    value {
+      i: 1024
+    }
+  }
+  attr {
+    key: "neth"
+    value {
+      i: 416
+    }
+  }
+  attr {
+    key: "netw"
+    value {
+      i: 416
+    }
+  }
+  attr {
+    key: "nms_thresh"
+    value {
+      f: 0.5
+    }
+  }
+}
+library {
+}
+versions {
+  producer: 38
+}

@@ -1,0 +1,3 @@
+/opt/code_chap_5_student/code_chap_5_1_student/src/offline/CMakeFiles/edit_cache.dir
+/opt/code_chap_5_student/code_chap_5_1_student/src/offline/CMakeFiles/rebuild_cache.dir
+/opt/code_chap_5_student/code_chap_5_1_student/src/offline/CMakeFiles/style_transfer.dir
